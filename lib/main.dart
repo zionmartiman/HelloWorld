@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pantalla_detalle.dart';
 import 'pantalla_layout.dart';
+import 'posicioning.dart';
 
 void main() => runApp(MyApp());
 
@@ -63,6 +64,15 @@ class _PantallaHomeState extends State<PantallaHome> {
                 },
                 child: Text('Ir a pantalla de Layouts'),
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Posicioning()),
+                );
+              },
+              child: Text('Ir a pantalla de Posicionamiento'),
             ),
           ],
         ),
