@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pantalla_detalle.dart';
+import 'pantalla_layout.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,9 +45,24 @@ class _PantallaHomeState extends State<PantallaHome> {
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _navegarADetalle,
-              child: Text('Ir a detalle y traer valor'),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+              child: ElevatedButton(
+                onPressed: _navegarADetalle,
+                child: Text('Ir a detalle y traer valor'),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PantallaLayout()),
+                  );
+                },
+                child: Text('Ir a pantalla de Layouts'),
+              ),
             ),
           ],
         ),
