@@ -3,6 +3,7 @@ import 'pantalla_detalle.dart';
 import 'pantalla_layout.dart';
 import 'posicioning.dart';
 import 'home.dart';
+import 'formulario.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/detalle': (context) => PantallaDetalle(valorInicial: 3),
         '/layout': (context) => const PantallaLayout(),
         '/posicionamiento': (context) => const Posicioning(),
+        '/formulario': (context) => const PantallaFormulario(),
       },
     );
   }

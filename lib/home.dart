@@ -61,10 +61,16 @@ class _PantallaHomeState extends State<PantallaHome> {
                 Navigator.pushNamed(
                   context,
                   '/posicionamiento',
-                  arguments: "este valor viene de home",
+                  arguments: "este valor viene de home: $_valorRecibido",
                 );
               },
               child: Text('Ir a pantalla de Posicionamiento'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/formulario');
+              },
+              child: Text('Ir a pantalla de Formulario'),
             ),
           ],
         ),
