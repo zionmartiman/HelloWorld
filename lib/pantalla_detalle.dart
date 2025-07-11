@@ -13,22 +13,6 @@ class _PantallaDetalleState extends State<PantallaDetalle> {
   late int _contador;
 
   @override
-  void initState() {
-    super.initState();
-    _contador = widget.valorInicial;
-  }
-
-  void _incrementar() {
-    setState(() {
-      _contador++;
-    });
-  }
-
-  void _volverConResultado() {
-    Navigator.pop(context, _contador);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Pantalla Detalle')),
@@ -48,5 +32,21 @@ class _PantallaDetalleState extends State<PantallaDetalle> {
         ),
       ),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _contador = widget.valorInicial;
+  }
+
+  void _incrementar() {
+    setState(() {
+      _contador++;
+    });
+  }
+
+  void _volverConResultado() {
+    Navigator.pop(context, _contador);
   }
 }

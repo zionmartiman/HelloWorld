@@ -4,6 +4,8 @@ class Posicioning extends StatelessWidget {
   const Posicioning({super.key});
   @override
   Widget build(BuildContext context) {
+    String mensaje = ModalRoute.of(context)!.settings.arguments as String;
+
     const double space = 30;
     return Scaffold(
       appBar: AppBar(title: const Text('Layouts')),
@@ -85,6 +87,7 @@ class Posicioning extends StatelessWidget {
                 ),
               ),
             ),
+            Text(mensaje),
           ],
         ),
       ),
